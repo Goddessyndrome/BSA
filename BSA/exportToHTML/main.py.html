@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>main.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #6897bb;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+main.py</font>
+</center></td></tr></table>
+<pre><span class="s0">def </span><span class="s1">binary_search(list</span><span class="s0">, </span><span class="s1">element):</span>
+    <span class="s1">middle = </span><span class="s2">0</span>
+    <span class="s1">start = </span><span class="s2">0</span>
+    <span class="s1">end = len(list)</span>
+    <span class="s1">steps = </span><span class="s2">0</span>
+
+    <span class="s0">while </span><span class="s1">(start &lt;= end):</span>
+        <span class="s1">print(</span><span class="s3">&quot;Step&quot;</span><span class="s0">, </span><span class="s1">steps</span><span class="s0">, </span><span class="s3">&quot;:&quot;</span><span class="s0">, </span><span class="s1">str(list[start:end + </span><span class="s2">1</span><span class="s1">]))</span>
+        <span class="s1">steps = steps + </span><span class="s2">1</span>
+        <span class="s1">middle = (start + end) // </span><span class="s2">2</span>
+
+        <span class="s0">if </span><span class="s1">element == list[middle]:</span>
+            <span class="s0">return </span><span class="s1">middle</span>
+        <span class="s0">if </span><span class="s1">element &lt; list[middle]:</span>
+            <span class="s1">end = middle - </span><span class="s2">1</span>
+        <span class="s0">else</span><span class="s1">:</span>
+            <span class="s1">start = middle + </span><span class="s2">1</span>
+
+    <span class="s0">return </span><span class="s1">-</span><span class="s2">1</span>
+
+
+<span class="s1">my_list = [</span><span class="s2">1</span><span class="s0">, </span><span class="s2">2</span><span class="s0">, </span><span class="s2">3</span><span class="s0">, </span><span class="s2">4</span><span class="s0">, </span><span class="s2">5</span><span class="s0">, </span><span class="s2">6</span><span class="s0">, </span><span class="s2">7</span><span class="s0">, </span><span class="s2">8</span><span class="s0">, </span><span class="s2">9</span><span class="s0">, </span><span class="s2">10</span><span class="s0">, </span><span class="s2">11</span><span class="s0">, </span><span class="s2">12</span><span class="s1">]</span>
+<span class="s1">target = </span><span class="s2">12</span>
+
+<span class="s1">binary_search(my_list</span><span class="s0">, </span><span class="s1">target)</span></pre>
+</body>
+</html>
